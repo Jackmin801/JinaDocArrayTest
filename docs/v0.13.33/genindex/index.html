@@ -185,8 +185,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -204,7 +203,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -797,7 +796,7 @@
           <li><a href="../api/docarray.document.mixins.convert/#docarray.document.mixins.convert.ConvertMixin.convert_uri_to_datauri">(docarray.document.mixins.convert.ConvertMixin method)</a>
 </li>
         </ul></li>
-        <li><a href="../api/docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap.converter">converter (docarray.array.storage.base.backend.TypeMap property)</a>
+        <li><a href="../api/docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap.converter">converter (docarray.array.storage.base.backend.TypeMap attribute)</a>
 </li>
         <li><a href="../api/docarray.document.mixins.convert/#docarray.document.mixins.convert.ConvertMixin">ConvertMixin (class in docarray.document.mixins.convert)</a>
 </li>
@@ -4012,7 +4011,7 @@
         </ul></li>
         <li><a href="../api/docarray.array.mixins.traverse/#docarray.array.mixins.traverse.TraverseMixin">TraverseMixin (class in docarray.array.mixins.traverse)</a>
 </li>
-        <li><a href="../api/docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap.type">type (docarray.array.storage.base.backend.TypeMap property)</a>
+        <li><a href="../api/docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap.type">type (docarray.array.storage.base.backend.TypeMap attribute)</a>
 </li>
         <li><a href="../api/docarray.array.chunk/#docarray.array.chunk.ChunkArray.TYPE_MAP">TYPE_MAP (docarray.array.chunk.ChunkArray attribute)</a>
 
@@ -4136,7 +4135,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 20, 2022</div>
+                            Last updated on Oct 23, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

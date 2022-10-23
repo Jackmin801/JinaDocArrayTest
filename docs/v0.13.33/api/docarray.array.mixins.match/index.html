@@ -217,8 +217,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -236,7 +235,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -428,20 +427,20 @@ To use scipy metric, please set ``use_scipy=True``.
 <li><p><strong>darray</strong> (<a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><em>DocumentArray</em></a>) – the other DocumentArray  to match against</p></li>
 <li><p><strong>metric</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]) – the distance metric</p></li>
 <li><p><strong>limit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the maximum number of matches, when not given defaults to 20.</p></li>
-<li><p><strong>normalization</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – a tuple [a, b] to be used with min-max normalization,
+<li><p><strong>normalization</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – a tuple [a, b] to be used with min-max normalization,
 the min distance will be rescaled to <cite>a</cite>, the max distance will be rescaled to <cite>b</cite>
 all values will be rescaled into range <cite>[a, b]</cite>.</p></li>
-<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if provided, then match result will be marked with this string.</p></li>
-<li><p><strong>batch_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – if provided, then <code class="docutils literal notranslate"><span class="pre">darray</span></code> is loaded in batches, where each of them is at most <code class="docutils literal notranslate"><span class="pre">batch_size</span></code>
+<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if provided, then match result will be marked with this string.</p></li>
+<li><p><strong>batch_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if provided, then <code class="docutils literal notranslate"><span class="pre">darray</span></code> is loaded in batches, where each of them is at most <code class="docutils literal notranslate"><span class="pre">batch_size</span></code>
 elements. When <cite>darray</cite> is big, this can significantly speedup the computation.</p></li>
 <li><p><strong>exclude_self</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, Documents in <code class="docutils literal notranslate"><span class="pre">darray</span></code> with same <code class="docutils literal notranslate"><span class="pre">id</span></code> as the left-hand values will not be
 considered as matches.</p></li>
-<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – filter query used for pre-filtering</p></li>
+<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – filter query used for pre-filtering</p></li>
 <li><p><strong>only_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, then returning matches will only contain <code class="docutils literal notranslate"><span class="pre">id</span></code></p></li>
 <li><p><strong>use_scipy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, use <code class="docutils literal notranslate"><span class="pre">scipy</span></code> as the computation backend. Note, <code class="docutils literal notranslate"><span class="pre">scipy</span></code> does not support distance
 on sparse matrix.</p></li>
 <li><p><strong>device</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the computational device for <code class="docutils literal notranslate"><span class="pre">.match()</span></code>, can be either <cite>cpu</cite> or <cite>cuda</cite>.</p></li>
-<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – <p>the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p>
+<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – <p>the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This argument is only effective when <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> is set.</p>
@@ -473,7 +472,7 @@ on sparse matrix.</p></li>
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 20, 2022</div>
+                            Last updated on Oct 23, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

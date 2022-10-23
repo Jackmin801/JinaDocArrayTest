@@ -219,8 +219,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -238,7 +237,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -507,7 +506,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 20, 2022</div>
+                            Last updated on Oct 23, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

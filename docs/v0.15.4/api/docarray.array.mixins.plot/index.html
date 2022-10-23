@@ -217,8 +217,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -236,7 +235,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -421,9 +420,9 @@
 <li><p><strong>title</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the title of this visualization. If you want to compare multiple embeddings at the same time,
 make sure to give different names each time and set <code class="docutils literal notranslate"><span class="pre">path</span></code> to the same value.</p></li>
 <li><p><strong>host</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – if set, bind the embedding-projector frontend to given host. Otherwise <cite>localhost</cite> is used.</p></li>
-<li><p><strong>port</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – if set, run the embedding-projector frontend at given port. Otherwise a random port is used.</p></li>
+<li><p><strong>port</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if set, run the embedding-projector frontend at given port. Otherwise a random port is used.</p></li>
 <li><p><strong>image_sprites</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, visualize the dots using <a class="reference internal" href="../docarray.document/#docarray.document.Document.uri" title="docarray.document.Document.uri"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uri</span></code></a> and <a class="reference internal" href="../docarray.document/#docarray.document.Document.tensor" title="docarray.document.Document.tensor"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tensor</span></code></a>.</p></li>
-<li><p><strong>path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if set, then append the visualization to an existing folder, where you can compare multiple
+<li><p><strong>path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if set, then append the visualization to an existing folder, where you can compare multiple
 embeddings at the same time. Make sure to use a different <code class="docutils literal notranslate"><span class="pre">title</span></code> each time .</p></li>
 <li><p><strong>min_image_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – only used when <cite>image_sprites=True</cite>. the minimum size of the image</p></li>
 <li><p><strong>channel_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – only used when <cite>image_sprites=True</cite>. the axis id of the color channel, <code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates the color channel info at the last axis</p></li>
@@ -476,14 +475,14 @@ Each sub-image is also square-sized and equally-sized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>output</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Optional path to store the visualization. If not given, show in UI</p></li>
+<li><p><strong>output</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – Optional path to store the visualization. If not given, show in UI</p></li>
 <li><p><strong>canvas_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the size of the canvas</p></li>
 <li><p><strong>min_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the minimum size of the image</p></li>
 <li><p><strong>channel_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the axis id of the color channel, <code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates the color channel info at the last axis</p></li>
 <li><p><strong>image_source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – specify where the image comes from, can be <code class="docutils literal notranslate"><span class="pre">uri</span></code> or <code class="docutils literal notranslate"><span class="pre">tensor</span></code>. empty tensor will fallback to uri</p></li>
 <li><p><strong>skip_empty</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – skip Document who has no .uri or .tensor.</p></li>
 <li><p><strong>show_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show the index on the top-right corner of every image</p></li>
-<li><p><strong>fig_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – the size of the figure</p></li>
+<li><p><strong>fig_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the size of the figure</p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show a progressbar while plotting.</p></li>
 <li><p><strong>keep_aspect_ratio</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – preserve the aspect ratio of the image by using the aspect ratio of the first image in self.</p></li>
 </ul>
@@ -511,7 +510,7 @@ Each sub-image is also square-sized and equally-sized.</p>
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 20, 2022</div>
+                            Last updated on Oct 23, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

@@ -181,8 +181,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -200,7 +199,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -705,7 +704,7 @@
     <span class="k">return</span> <span class="n">_is_dataclass</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;from_document&#39;</span><span class="p">)</span></div>
 
 
-<span class="nd">@classmethod</span>
+<div class="viewcode-block" id="from_document"><a class="viewcode-back" href="../../../../api/docarray.dataclasses.types/#docarray.dataclasses.types.from_document">[docs]</a><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">from_document</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">doc</span><span class="p">:</span> <span class="s1">&#39;Document&#39;</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span><span class="o">.</span><span class="n">is_multimodal</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
@@ -749,7 +748,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Invalid attribute at `</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">`&#39;</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">attributes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">attributes</span><span class="p">)</span></div>
 
 
 <span class="k">def</span> <span class="nf">_get_doc_attribute</span><span class="p">(</span><span class="n">attribute_doc</span><span class="p">:</span> <span class="s1">&#39;Document&#39;</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
@@ -779,7 +778,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 20, 2022.
+                            Last updated on Oct 23, 2022.
                         </div>
                     </div>
                     <div class="right-details">

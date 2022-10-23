@@ -212,8 +212,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -231,7 +230,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -515,7 +514,7 @@ Each :class:<code class="docutils literal notranslate"><span class="pre">Travers
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a comma-separated string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
+<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – function to filter docs during traversal</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yield</dt>
@@ -550,7 +549,7 @@ with all Documents, that are reached by the path.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a comma-separated string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
+<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – function to filter docs during traversal</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yield</dt>
@@ -574,7 +573,7 @@ behavior then in :method:<code class="docutils literal notranslate"><span class=
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a list of string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
+<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – function to filter docs during traversal</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -640,7 +639,7 @@ behavior then in :method:<code class="docutils literal notranslate"><span class=
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Oct 20, 2022.
+                    Last updated on Oct 23, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/docarray/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

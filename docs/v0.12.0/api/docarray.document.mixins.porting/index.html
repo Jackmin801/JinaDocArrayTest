@@ -212,8 +212,7 @@
   }
 </script>
 <script defer>
-  // If this is still Jackmin801's fork in jina-ai. This is a bug. Please report this!
-  fetch("https://raw.githubusercontent.com/Jackmin801/JinaDocArrayTest/main/docs/_versions.json")
+  fetch(`https://${window.location.host}/_versions.json`)
   .then((resp) => resp.json())
   .then((data) => {
     var versionSelector = document.getElementsByClassName("version-select")[0]
@@ -231,7 +230,7 @@
   .catch((err) => console.log(err));
 </script>
 <div class="sd-d-flex-row sd-align-major-spaced">
-  <a class="github-button" href="https://github.com/jina-ai/jina" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
+  <a class="github-button" href="https://github.com/jina-ai/docarray" data-icon="octicon-star" data-show-count="true" aria-label="Star jina-ai/jina on GitHub" style="opacity: 0;">Star</a>
   <select onChange="setPrefix(this.value)" class="version-select">
     <option value="/">latest</option>
   </select>
@@ -642,7 +641,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – binary bytes</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress method to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress method to use</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -682,7 +681,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress method to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress method to use</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -703,7 +702,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a base64 encoded string</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress method to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress method to use</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -756,7 +755,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 20, 2022.
+                            Last updated on Oct 23, 2022.
                         </div>
                     </div>
                     <div class="right-details">
