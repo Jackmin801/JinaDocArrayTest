@@ -1,5 +1,5 @@
-docarray
-========
+JinaDocArrayTest
+================
 
 .. toctree::
    :maxdepth: 4
