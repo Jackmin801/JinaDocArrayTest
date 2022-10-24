@@ -34,10 +34,11 @@ function clean_build {
 
 function pub_pypi {
     # publish to pypi
-    clean_build
-    python setup.py sdist
-    twine upload dist/*
-    clean_build
+    #clean_build
+    #python setup.py sdist
+    #twine upload dist/*
+    #clean_build
+    echo pub_pypi
 }
 
 function git_commit {
