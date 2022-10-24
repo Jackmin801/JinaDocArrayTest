@@ -641,7 +641,7 @@
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;Document (&#39;id&#39;, &#39;chunks&#39;, &#39;matches&#39;) at d0&gt;
 </pre></div>
 </div>
-<p>For a nested Document, print its root does not give you much information. You can use <code class="xref py py-meth docutils literal notranslate"><span class="pre">summary()</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">d.summary()</span></code> gives you a more intuitive overview of the structure.</p>
+<p>For a nested Document, print its root does not give you much information. You can use <a class="reference internal" href="../../../api/docarray.document.mixins.plot/#docarray.document.mixins.plot.PlotMixin.summary" title="docarray.document.mixins.plot.PlotMixin.summary"><code class="xref py py-meth docutils literal notranslate"><span class="pre">summary()</span></code></a>. For example, <code class="docutils literal notranslate"><span class="pre">d.summary()</span></code> gives you a more intuitive overview of the structure.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span> &lt;Document (&#39;id&#39;, &#39;chunks&#39;, &#39;matches&#39;) at d0&gt;
     └─ matches
           └─ &lt;Document (&#39;id&#39;,) at d3&gt;
@@ -703,7 +703,7 @@
 </pre></div>
 </div>
 <p>That indicates <code class="docutils literal notranslate"><span class="pre">d</span></code> and <code class="docutils literal notranslate"><span class="pre">d1</span></code> have identical content, but they are different objects in memory.</p>
-<p>If you want to keep the memory address of a Document object while only copying the content from another Document, you can use <code class="xref py py-meth docutils literal notranslate"><span class="pre">copy_from()</span></code>.</p>
+<p>If you want to keep the memory address of a Document object while only copying the content from another Document, you can use <a class="reference internal" href="../../../api/docarray.base/#docarray.base.BaseDCType.copy_from" title="docarray.base.BaseDCType.copy_from"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copy_from()</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docarray</span> <span class="kn">import</span> <span class="n">Document</span>
 
 <span class="n">d1</span> <span class="o">=</span> <span class="n">Document</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
@@ -764,7 +764,7 @@ world
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

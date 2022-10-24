@@ -409,8 +409,139 @@
 </ul>
 </div>
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
+<section id="module-docarray.array.storage.annlite">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docarray.array.storage.annlite" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.annlite.</span></span><span class="sig-name descname"><span class="pre">StorageMixins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/annlite/#StorageMixins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.annlite.find/#docarray.array.storage.annlite.find.FindMixin" title="docarray.array.storage.annlite.find.FindMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.annlite.find.FindMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.annlite.backend/#docarray.array.storage.annlite.backend.BackendMixin" title="docarray.array.storage.annlite.backend.BackendMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.annlite.backend.BackendMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.annlite.getsetdel/#docarray.array.storage.annlite.getsetdel.GetSetDelMixin" title="docarray.array.storage.annlite.getsetdel.GetSetDelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.annlite.getsetdel.GetSetDelMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.annlite.seqlike/#docarray.array.storage.annlite.seqlike.SequenceLikeMixin" title="docarray.array.storage.annlite.seqlike.SequenceLikeMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.annlite.seqlike.SequenceLikeMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.TYPE_MAP">
+<span class="sig-name descname"><span class="pre">TYPE_MAP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap" title="docarray.array.storage.base.backend.TypeMap"><span class="pre">docarray.array.storage.base.backend.TypeMap</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'float':</span> <span class="pre">TypeMap(type='float',</span> <span class="pre">converter=&lt;class</span> <span class="pre">'float'&gt;),</span> <span class="pre">'int':</span> <span class="pre">TypeMap(type='integer',</span> <span class="pre">converter=&lt;function</span> <span class="pre">_safe_cast_int&gt;),</span> <span class="pre">'str':</span> <span class="pre">TypeMap(type='TEXT',</span> <span class="pre">converter=&lt;class</span> <span class="pre">'str'&gt;)}</span></em><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.TYPE_MAP" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.append" title="Permalink to this definition">#</a></dt>
+<dd><p>Append <cite>doc</cite> to the end of the array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>) – The doc needs to be appended.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.clear" title="Permalink to this definition">#</a></dt>
+<dd><p>Clear the data of <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.count">
+<span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">integer</span> <span class="pre">--</span> <span class="pre">return</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">occurrences</span> <span class="pre">of</span> <span class="pre">value</span></span></span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.count" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.extend" title="Permalink to this definition">#</a></dt>
+<dd><p>S.extend(iterable) – extend sequence by appending elements from the iterable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">integer</span> <span class="pre">--</span> <span class="pre">return</span> <span class="pre">first</span> <span class="pre">index</span> <span class="pre">of</span> <span class="pre">value.</span></span></span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.index" title="Permalink to this definition">#</a></dt>
+<dd><p>Raises ValueError if the value is not present.</p>
+<p>Supporting start and stop arguments is optional, but
+recommended.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.insert">
+<span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.insert" title="Permalink to this definition">#</a></dt>
+<dd><p>Insert <cite>doc</cite> at <cite>index</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Position of the insertion.</p></li>
+<li><p><strong>value</strong> (<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>) – The doc needs to be inserted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">item</span> <span class="pre">--</span> <span class="pre">remove</span> <span class="pre">and</span> <span class="pre">return</span> <span class="pre">item</span> <span class="pre">at</span> <span class="pre">index</span> <span class="pre">(default</span> <span class="pre">last).</span></span></span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.pop" title="Permalink to this definition">#</a></dt>
+<dd><p>Raise IndexError if list is empty or index is out of range.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.remove" title="Permalink to this definition">#</a></dt>
+<dd><p>S.remove(value) – remove first occurrence of value.
+Raise ValueError if the value is not present.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.StorageMixins.reverse">
+<span class="sig-name descname"><span class="pre">reverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#docarray.array.storage.annlite.StorageMixins.reverse" title="Permalink to this definition">#</a></dt>
+<dd><p>S.reverse() – reverse <em>IN PLACE</em></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.annlite.</span></span><span class="sig-name descname"><span class="pre">AnnliteConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric='cosine'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serialize_config=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ef_construction=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ef_search=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_connection=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/annlite/backend/#AnnliteConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.n_dim">
+<span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.n_dim" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.metric">
+<span class="sig-name descname"><span class="pre">metric</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cosine'</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.metric" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.serialize_config">
+<span class="sig-name descname"><span class="pre">serialize_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.serialize_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.data_path">
+<span class="sig-name descname"><span class="pre">data_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.data_path" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.ef_construction">
+<span class="sig-name descname"><span class="pre">ef_construction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.ef_construction" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.ef_search">
+<span class="sig-name descname"><span class="pre">ef_search</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.ef_search" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.max_connection">
+<span class="sig-name descname"><span class="pre">max_connection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.max_connection" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.annlite.AnnliteConfig.columns">
+<span class="sig-name descname"><span class="pre">columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.annlite.AnnliteConfig.columns" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
@@ -427,7 +558,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">
@@ -461,7 +592,7 @@
                         <ul>
 <li><a class="reference internal" href="#">docarray.array.storage.annlite package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-docarray.array.storage.annlite">Module contents</a></li>
 </ul>
 </li>
 </ul>

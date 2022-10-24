@@ -655,11 +655,6 @@
 <span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#docarray.dataclasses.types.Field.metadata" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="docarray.dataclasses.types.Field.kw_only">
-<span class="sig-name descname"><span class="pre">kw_only</span></span><a class="headerlink" href="#docarray.dataclasses.types.Field.kw_only" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py function">
@@ -702,8 +697,29 @@ not be assigned to after instance creation.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="docarray.dataclasses.types.from_document">
-<span class="sig-prename descclassname"><span class="pre">docarray.dataclasses.types.</span></span><span class="sig-name descname"><span class="pre">from_document</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/dataclasses/types/#from_document"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.dataclasses.types.from_document" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<span class="sig-prename descclassname"><span class="pre">docarray.dataclasses.types.</span></span><span class="sig-name descname"><span class="pre">from_document</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#docarray.dataclasses.types.from_document" title="Permalink to this definition">#</a></dt>
+<dd><p>classmethod(function) -&gt; method</p>
+<p>Convert a function to be a class method.</p>
+<p>A class method receives the class as implicit first argument,
+just like an instance method receives the instance.
+To declare a class method, use this idiom:</p>
+<blockquote>
+<div><dl>
+<dt>class C:</dt><dd><p>&#64;classmethod
+def f(cls, arg1, arg2, …):</p>
+<blockquote>
+<div><p>…</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p>It can be called either on the class (e.g. C.f()) or on an instance
+(e.g. C().f()).  The instance is ignored except for its class.
+If a class method is called for a derived class, the derived class
+object is passed as the implied first argument.</p>
+<p>Class methods are different than C++ or Java static methods.
+If you want those, see the staticmethod builtin.</p>
+</dd></dl>
 
 </section>
 
@@ -744,7 +760,7 @@ not be assigned to after instance creation.</p>
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

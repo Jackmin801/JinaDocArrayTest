@@ -584,7 +584,7 @@
 in-place (only with <cite>thread</cite> backend) or work later on return elements.</p></li>
 <li><p><strong>batch_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Size of each generated batch (except the last one, which might be smaller)</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress algorithm to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress algorithm to use</p></li>
 <li><p><strong>backend</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <p>if to use multi-<cite>process</cite> or multi-<cite>thread</cite> as the parallelization backend. In general, if your
 <code class="docutils literal notranslate"><span class="pre">func</span></code> is IO-bound then perhaps <cite>thread</cite> is good enough. If your <code class="docutils literal notranslate"><span class="pre">func</span></code> is CPU-bound then you may use <cite>process</cite>.
 In practice, you should try yourselves to figure out the best value. However, if you wish to modify the elements
@@ -596,7 +596,7 @@ the multiprocessing backing pass the variable via pickle and work in another pro
 and the original object do <strong>not</strong> share the same memory.</p>
 </div>
 </p></li>
-<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
+<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
 <li><p><strong>pool</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – use an existing/external pool. If given, <cite>backend</cite> is ignored and you will be responsible for closing the pool.</p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, show a progressbar</p></li>
 </ul>
@@ -652,7 +652,7 @@ and the original object do <strong>not</strong> share the same memory.</p>
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

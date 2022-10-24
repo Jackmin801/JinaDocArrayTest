@@ -586,8 +586,155 @@
 </ul>
 </div>
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
+<section id="module-docarray.array.storage.qdrant">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docarray.array.storage.qdrant" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.qdrant.</span></span><span class="sig-name descname"><span class="pre">StorageMixins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/qdrant/#StorageMixins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.qdrant.find/#docarray.array.storage.qdrant.find.FindMixin" title="docarray.array.storage.qdrant.find.FindMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.qdrant.find.FindMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.qdrant.backend/#docarray.array.storage.qdrant.backend.BackendMixin" title="docarray.array.storage.qdrant.backend.BackendMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.qdrant.backend.BackendMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.qdrant.getsetdel/#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin" title="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.qdrant.getsetdel.GetSetDelMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.qdrant.seqlike/#docarray.array.storage.qdrant.seqlike.SequenceLikeMixin" title="docarray.array.storage.qdrant.seqlike.SequenceLikeMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.qdrant.seqlike.SequenceLikeMixin</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.serialize_config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serialize_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.serialize_config" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.distance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Distance</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.distance" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Distance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.serialization_config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serialization_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.serialization_config" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.n_dim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.n_dim" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.collection_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collection_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.collection_name" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.collection_name_meta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collection_name_meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.collection_name_meta" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.client">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">QdrantClient</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.client" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QdrantClient</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.StorageMixins.scroll_batch_size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scroll_batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.StorageMixins.scroll_batch_size" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.qdrant.</span></span><span class="sig-name descname"><span class="pre">QdrantConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance='cosine'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host='localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port=6333</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serialize_config=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scroll_batch_size=64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ef_construct=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_scan_threshold=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/qdrant/backend/#QdrantConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.n_dim">
+<span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.n_dim" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cosine'</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.distance" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.collection_name">
+<span class="sig-name descname"><span class="pre">collection_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.collection_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.host">
+<span class="sig-name descname"><span class="pre">host</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'localhost'</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.host" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.port">
+<span class="sig-name descname"><span class="pre">port</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6333</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.port" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.serialize_config">
+<span class="sig-name descname"><span class="pre">serialize_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.serialize_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.scroll_batch_size">
+<span class="sig-name descname"><span class="pre">scroll_batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">64</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.scroll_batch_size" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.ef_construct">
+<span class="sig-name descname"><span class="pre">ef_construct</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.ef_construct" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.full_scan_threshold">
+<span class="sig-name descname"><span class="pre">full_scan_threshold</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.full_scan_threshold" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.QdrantConfig.m">
+<span class="sig-name descname"><span class="pre">m</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.QdrantConfig.m" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
@@ -626,7 +773,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">
@@ -660,7 +807,7 @@
                         <ul>
 <li><a class="reference internal" href="#">docarray.array.storage.qdrant package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-docarray.array.storage.qdrant">Module contents</a></li>
 </ul>
 </li>
 </ul>

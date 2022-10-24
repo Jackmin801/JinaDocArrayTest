@@ -490,7 +490,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vocab</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – a dictionary that maps a word to an integer index, <cite>0</cite> is reserved for padding, <cite>1</cite> is reserved
 for unknown words in <a class="reference internal" href="../docarray.document.data/#docarray.document.data.DocumentData.text" title="docarray.document.data.DocumentData.text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">text</span></code></a>. So you should <em>not</em> include these two entries in <cite>vocab</cite>.</p></li>
-<li><p><strong>max_length</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the maximum length of the sequence. Sequence longer than this are cut off from <em>beginning</em>.
+<li><p><strong>max_length</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the maximum length of the sequence. Sequence longer than this are cut off from <em>beginning</em>.
 Sequence shorter than this will be padded with <cite>0</cite> from right hand side.</p></li>
 <li><p><strong>dtype</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the dtype of the generated <a class="reference internal" href="../docarray.document.data/#docarray.document.data.DocumentData.tensor" title="docarray.document.data.DocumentData.tensor"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tensor</span></code></a></p></li>
 </ul>
@@ -583,7 +583,7 @@ Sometimes used for text data that frequently uses non-US-ASCII characters.</p></
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Oct 23, 2022.
+                    Last updated on Oct 24, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/docarray/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

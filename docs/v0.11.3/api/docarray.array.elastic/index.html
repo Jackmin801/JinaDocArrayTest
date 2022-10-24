@@ -547,8 +547,61 @@
                         </i>
                     </label>
                 </div>
-                <section id="docarray-array-elastic-module">
-<h1>docarray.array.elastic module<a class="headerlink" href="#docarray-array-elastic-module" title="Permalink to this headline">#</a></h1>
+                <section id="module-docarray.array.elastic">
+<span id="docarray-array-elastic-module"></span><h1>docarray.array.elastic module<a class="headerlink" href="#module-docarray.array.elastic" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.elastic.DocumentArrayElastic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.elastic.</span></span><span class="sig-name descname"><span class="pre">DocumentArrayElastic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'memory'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/elastic/#DocumentArrayElastic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.elastic.DocumentArrayElastic" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.elastic/#docarray.array.storage.elastic.StorageMixins" title="docarray.array.storage.elastic.StorageMixins"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.elastic.StorageMixins</span></code></a>, <a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.document.DocumentArray</span></code></a></p>
+<p>This is a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code> that uses Elasticsearch as
+vector search engine and storage.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__new__</span></code> method for <a class="reference internal" href="#docarray.array.elastic.DocumentArrayElastic" title="docarray.array.elastic.DocumentArrayElastic"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayElastic</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – <p>list of args to instantiate the object</p>
+</p></li>
+<li><p><strong>**kwargs</strong> – <p>dict of args to instantiate the object</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the instantiated <a class="reference internal" href="#docarray.array.elastic.DocumentArrayElastic" title="docarray.array.elastic.DocumentArrayElastic"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayElastic</span></code></a> object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.elastic.ElasticConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.elastic.</span></span><span class="sig-name descname"><span class="pre">ElasticConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance='cosine'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hosts='http://localhost:9200'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">es_config=&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/elastic/backend/#ElasticConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.elastic.ElasticConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.elastic.ElasticConfig.n_dim">
+<span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.elastic.ElasticConfig.n_dim" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.elastic.ElasticConfig.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cosine'</span></em><a class="headerlink" href="#docarray.array.elastic.ElasticConfig.distance" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.elastic.ElasticConfig.hosts">
+<span class="sig-name descname"><span class="pre">hosts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'http://localhost:9200'</span></em><a class="headerlink" href="#docarray.array.elastic.ElasticConfig.hosts" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.elastic.ElasticConfig.index_name">
+<span class="sig-name descname"><span class="pre">index_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.elastic.ElasticConfig.index_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.elastic.ElasticConfig.es_config">
+<span class="sig-name descname"><span class="pre">es_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.elastic.ElasticConfig.es_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
             </article>
@@ -588,7 +641,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

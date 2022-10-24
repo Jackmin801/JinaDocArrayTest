@@ -539,8 +539,66 @@
                         </i>
                     </label>
                 </div>
-                <section id="docarray-document-mixins-multimodal-module">
-<h1>docarray.document.mixins.multimodal module<a class="headerlink" href="#docarray-document-mixins-multimodal-module" title="Permalink to this headline">#</a></h1>
+                <section id="module-docarray.document.mixins.multimodal">
+<span id="docarray-document-mixins-multimodal-module"></span><h1>docarray.document.mixins.multimodal module<a class="headerlink" href="#module-docarray.document.mixins.multimodal" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.mixins.multimodal.</span></span><span class="sig-name descname"><span class="pre">AttributeType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/multimodal/#AttributeType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType.DOCUMENT">
+<span class="sig-name descname"><span class="pre">DOCUMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'document'</span></em><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType.DOCUMENT" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType.PRIMITIVE">
+<span class="sig-name descname"><span class="pre">PRIMITIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'primitive'</span></em><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType.PRIMITIVE" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType.ITERABLE_PRIMITIVE">
+<span class="sig-name descname"><span class="pre">ITERABLE_PRIMITIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'iterable_primitive'</span></em><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType.ITERABLE_PRIMITIVE" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType.ITERABLE_DOCUMENT">
+<span class="sig-name descname"><span class="pre">ITERABLE_DOCUMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'iterable_document'</span></em><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType.ITERABLE_DOCUMENT" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType.NESTED">
+<span class="sig-name descname"><span class="pre">NESTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'nested'</span></em><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType.NESTED" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.AttributeType.ITERABLE_NESTED">
+<span class="sig-name descname"><span class="pre">ITERABLE_NESTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'iterable_nested'</span></em><a class="headerlink" href="#docarray.document.mixins.multimodal.AttributeType.ITERABLE_NESTED" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.MultiModalMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.mixins.multimodal.</span></span><span class="sig-name descname"><span class="pre">MultiModalMixin</span></span><a class="reference internal" href="../../_modules/docarray/document/mixins/multimodal/#MultiModalMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.multimodal.MultiModalMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.MultiModalMixin.from_dataclass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dataclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/multimodal/#MultiModalMixin.from_dataclass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.multimodal.MultiModalMixin.from_dataclass" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.multimodal.MultiModalMixin.get_multi_modal_attribute">
+<span class="sig-name descname"><span class="pre">get_multi_modal_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/multimodal/#MultiModalMixin.get_multi_modal_attribute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.multimodal.MultiModalMixin.get_multi_modal_attribute" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray">DocumentArray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
             </article>
@@ -580,7 +638,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

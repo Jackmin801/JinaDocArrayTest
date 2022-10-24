@@ -547,7 +547,7 @@
 <p class="admonition-title">Tip</p>
 <p>This feature requires <code class="docutils literal notranslate"><span class="pre">jina</span></code> dependency. Please install Jina via <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jina</span></code>.</p>
 </div>
-<p>You can call an external Flow/Sandbox/Executor to “process” a DocumentArray via <code class="xref py py-meth docutils literal notranslate"><span class="pre">post()</span></code>. The external Flow/Executor can be either local, remote, or inside Docker container.</p>
+<p>You can call an external Flow/Sandbox/Executor to “process” a DocumentArray via <a class="reference internal" href="../../../api/docarray.array.mixins.post/#docarray.array.mixins.post.PostMixin.post" title="docarray.array.mixins.post.PostMixin.post"><code class="xref py py-meth docutils literal notranslate"><span class="pre">post()</span></code></a>. The external Flow/Executor can be either local, remote, or inside Docker container.</p>
 <p>For example, to use an existing Flow on <code class="docutils literal notranslate"><span class="pre">192.168.2.3</span></code> on port <code class="docutils literal notranslate"><span class="pre">12345</span></code> to process a DocumentArray:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docarray</span> <span class="kn">import</span> <span class="n">DocumentArray</span>
 
@@ -584,7 +584,7 @@
 </div>
 <section id="accept-schemes">
 <h2>Accept schemes<a class="headerlink" href="#accept-schemes" title="Permalink to this headline">#</a></h2>
-<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">post()</span></code> accepts a URI-like scheme that supports a wide range of Flow/Hub Executor. It is described as below:</p>
+<p><a class="reference internal" href="../../../api/docarray.array.mixins.post/#docarray.array.mixins.post.PostMixin.post" title="docarray.array.mixins.post.PostMixin.post"><code class="xref py py-meth docutils literal notranslate"><span class="pre">post()</span></code></a> accepts a URI-like scheme that supports a wide range of Flow/Hub Executor. It is described as below:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>scheme://netloc[:port][/path]
 </pre></div>
 </div>
@@ -680,7 +680,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

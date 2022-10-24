@@ -511,8 +511,42 @@
 </ul>
 </div>
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">#</a></h2>
+<section id="module-docarray.array.storage.weaviate">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docarray.array.storage.weaviate" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.weaviate.StorageMixins">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.weaviate.</span></span><span class="sig-name descname"><span class="pre">StorageMixins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/weaviate/#StorageMixins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.weaviate.StorageMixins" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.weaviate.find/#docarray.array.storage.weaviate.find.FindMixin" title="docarray.array.storage.weaviate.find.FindMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.weaviate.find.FindMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.weaviate.backend/#docarray.array.storage.weaviate.backend.BackendMixin" title="docarray.array.storage.weaviate.backend.BackendMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.weaviate.backend.BackendMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.weaviate.getsetdel/#docarray.array.storage.weaviate.getsetdel.GetSetDelMixin" title="docarray.array.storage.weaviate.getsetdel.GetSetDelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.weaviate.getsetdel.GetSetDelMixin</span></code></a>, <a class="reference internal" href="../docarray.array.storage.weaviate.seqlike/#docarray.array.storage.weaviate.seqlike.SequenceLikeMixin" title="docarray.array.storage.weaviate.seqlike.SequenceLikeMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.weaviate.seqlike.SequenceLikeMixin</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.weaviate.WeaviateConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.weaviate.</span></span><span class="sig-name descname"><span class="pre">WeaviateConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client='http://localhost:8080'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serialize_config=&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/weaviate/backend/#WeaviateConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.weaviate.WeaviateConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class stores the config variables to initialize
+connection to the Weaviate server</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.weaviate.WeaviateConfig.n_dim">
+<span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.weaviate.WeaviateConfig.n_dim" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.weaviate.WeaviateConfig.client">
+<span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">weaviate.client.Client</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'http://localhost:8080'</span></em><a class="headerlink" href="#docarray.array.storage.weaviate.WeaviateConfig.client" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.weaviate.WeaviateConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.weaviate.WeaviateConfig.name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.weaviate.WeaviateConfig.serialize_config">
+<span class="sig-name descname"><span class="pre">serialize_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span></em><a class="headerlink" href="#docarray.array.storage.weaviate.WeaviateConfig.serialize_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
@@ -548,7 +582,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Oct 23, 2022.
+                    Last updated on Oct 24, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/docarray/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>
@@ -575,7 +609,7 @@
                         <ul>
 <li><a class="reference internal" href="#">docarray.array.storage.weaviate package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-docarray.array.storage.weaviate">Module contents</a></li>
 </ul>
 </li>
 </ul>

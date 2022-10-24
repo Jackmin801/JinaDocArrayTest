@@ -391,8 +391,74 @@
                     </label>
                 </div>
                 <article role="main">
-                    <section id="docarray-array-storage-qdrant-getsetdel-module">
-<h1>docarray.array.storage.qdrant.getsetdel module<a class="headerlink" href="#docarray-array-storage-qdrant-getsetdel-module" title="Permalink to this headline">#</a></h1>
+                    <section id="module-docarray.array.storage.qdrant.getsetdel">
+<span id="docarray-array-storage-qdrant-getsetdel-module"></span><h1>docarray.array.storage.qdrant.getsetdel module<a class="headerlink" href="#module-docarray.array.storage.qdrant.getsetdel" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.qdrant.getsetdel.</span></span><span class="sig-name descname"><span class="pre">GetSetDelMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/storage/qdrant/getsetdel/#GetSetDelMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.base.getsetdel/#docarray.array.storage.base.getsetdel.BaseGetSetDelMixin" title="docarray.array.storage.base.getsetdel.BaseGetSetDelMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.base.getsetdel.BaseGetSetDelMixin</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.client">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">qdrant_client.qdrant_client.QdrantClient</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.client" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">QdrantClient</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.serialization_config">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serialization_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.serialization_config" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.n_dim">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.n_dim" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.collection_name">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collection_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.collection_name" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.scroll_batch_size">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scroll_batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.scroll_batch_size" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.scan">
+<span class="sig-name descname"><span class="pre">scan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/qdrant/getsetdel/#GetSetDelMixin.scan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.qdrant.getsetdel.GetSetDelMixin.scan" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code>[<a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
                 </article>
@@ -408,7 +474,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

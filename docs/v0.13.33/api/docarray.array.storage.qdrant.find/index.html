@@ -391,8 +391,54 @@
                     </label>
                 </div>
                 <article role="main">
-                    <section id="docarray-array-storage-qdrant-find-module">
-<h1>docarray.array.storage.qdrant.find module<a class="headerlink" href="#docarray-array-storage-qdrant-find-module" title="Permalink to this headline">#</a></h1>
+                    <section id="module-docarray.array.storage.qdrant.find">
+<span id="docarray-array-storage-qdrant-find-module"></span><h1>docarray.array.storage.qdrant.find module<a class="headerlink" href="#module-docarray.array.storage.qdrant.find" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.find.FindMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.qdrant.find.</span></span><span class="sig-name descname"><span class="pre">FindMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/storage/qdrant/find/#FindMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.qdrant.find.FindMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.find.FindMixin.client">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">QdrantClient</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.find.FindMixin.client" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QdrantClient</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.find.FindMixin.collection_name">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collection_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.find.FindMixin.collection_name" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.find.FindMixin.serialize_config">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serialize_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.find.FindMixin.serialize_config" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="docarray.array.storage.qdrant.find.FindMixin.distance">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">qdrant_client.http.models.models.Distance</span></em><a class="headerlink" href="#docarray.array.storage.qdrant.find.FindMixin.distance" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Distance</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
                 </article>
@@ -408,7 +454,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

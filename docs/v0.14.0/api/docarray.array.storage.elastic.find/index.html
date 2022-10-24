@@ -392,8 +392,55 @@
                     </label>
                 </div>
                 <article role="main">
-                    <section id="docarray-array-storage-elastic-find-module">
-<h1>docarray.array.storage.elastic.find module<a class="headerlink" href="#docarray-array-storage-elastic-find-module" title="Permalink to this headline">#</a></h1>
+                    <section id="module-docarray.array.storage.elastic.find">
+<span id="docarray-array-storage-elastic-find-module"></span><h1>docarray.array.storage.elastic.find module<a class="headerlink" href="#module-docarray.array.storage.elastic.find" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.find.FindMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.elastic.find.</span></span><span class="sig-name descname"><span class="pre">FindMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/storage/elastic/find/#FindMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.elastic.find.FindMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.mixins.find/#docarray.array.mixins.find.FindMixin" title="docarray.array.mixins.find.FindMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.mixins.find.FindMixin</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.find.FindMixin.find">
+<span class="sig-name descname"><span class="pre">find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cosine'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_self</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'text'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/mixins/find/#FindMixin.find"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.elastic.find.FindMixin.find" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns matching Documents given an input query.
+If the query is a <cite>DocumentArray</cite>, <cite>Document</cite> or <cite>ArrayType</cite>, exhaustive or approximate nearest neighbor search
+will be performed depending on whether the storage backend supports ANN. Furthermore, if filter is not None,
+pre-filtering will be applied along with vector search.
+If the query is a <cite>dict</cite> object or, query is None and filter is not None, Documents will be filtered and all
+matching Documents that match the filter will be returned. In this case, query (if it’s dict) or filter will be
+used for filtering. The object must follow the backend-specific filter format if the backend supports filtering
+or DocArray’s query language format. In the latter case, filtering will be applied in the client side not the
+backend side.
+If the query is a string or list of strings, a search by text will be performed if the backend supports
+indexing and searching text fields. If not, a <cite>NotImplementedError</cite> will be raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the input query to search by</p></li>
+<li><p><strong>limit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the maximum number of matches, when not given defaults to 20.</p></li>
+<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if provided, then match result will be marked with this string.</p></li>
+<li><p><strong>metric</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]) – the distance metric.</p></li>
+<li><p><strong>exclude_self</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, Documents in results with same <code class="docutils literal notranslate"><span class="pre">id</span></code> as the query values will not be
+considered as matches. This is only applied when the input query is Document or DocumentArray.</p></li>
+<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – filter query used for pre-filtering or filtering</p></li>
+<li><p><strong>only_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, then returning matches will only contain <code class="docutils literal notranslate"><span class="pre">id</span></code></p></li>
+<li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – if the query is a string, text search will be performed on the <cite>index</cite> field, otherwise, this
+parameter is ignored. By default, the Document <cite>text</cite> attribute will be used for search,
+otherwise the tag field specified by <cite>index</cite> will be used. You can only use this parameter if the
+storage backend supports searching by text.</p></li>
+<li><p><strong>kwargs</strong> – other kwargs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of DocumentArrays containing the closest Document objects for each of the queries in <cite>query</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
                 </article>
@@ -409,7 +456,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

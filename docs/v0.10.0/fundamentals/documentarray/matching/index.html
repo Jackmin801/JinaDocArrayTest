@@ -545,9 +545,9 @@
 <span id="match-documentarray"></span><h1>Match Nearest Neighbours<a class="headerlink" href="#match-nearest-neighbours" title="Permalink to this headline">#</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><code class="xref py py-meth docutils literal notranslate"><span class="pre">match()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">find()</span></code> support both CPU &amp; GPU.</p>
+<p><a class="reference internal" href="../../../api/docarray.array.mixins.match/#docarray.array.mixins.match.MatchMixin.match" title="docarray.array.mixins.match.MatchMixin.match"><code class="xref py py-meth docutils literal notranslate"><span class="pre">match()</span></code></a> and <a class="reference internal" href="../../../api/docarray.array.mixins.find/#docarray.array.mixins.find.FindMixin.find" title="docarray.array.mixins.find.FindMixin.find"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find()</span></code></a> support both CPU &amp; GPU.</p>
 </div>
-<p>Once <code class="docutils literal notranslate"><span class="pre">.embeddings</span></code> is set, one can use <code class="xref py py-meth docutils literal notranslate"><span class="pre">find()</span></code> or <code class="xref py py-func docutils literal notranslate"><span class="pre">match()</span></code> function to find the nearest-neighbour Documents from another DocumentArray (or itself) based on their <code class="docutils literal notranslate"><span class="pre">.embeddings</span></code> and distance metrics.</p>
+<p>Once <code class="docutils literal notranslate"><span class="pre">.embeddings</span></code> is set, one can use <a class="reference internal" href="../../../api/docarray.array.mixins.find/#docarray.array.mixins.find.FindMixin.find" title="docarray.array.mixins.find.FindMixin.find"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find()</span></code></a> or <a class="reference internal" href="../../../api/docarray.array.mixins.match/#docarray.array.mixins.match.MatchMixin.match" title="docarray.array.mixins.match.MatchMixin.match"><code class="xref py py-func docutils literal notranslate"><span class="pre">match()</span></code></a> function to find the nearest-neighbour Documents from another DocumentArray (or itself) based on their <code class="docutils literal notranslate"><span class="pre">.embeddings</span></code> and distance metrics.</p>
 <section id="difference-between-find-and-match">
 <h2>Difference between find and match<a class="headerlink" href="#difference-between-find-and-match" title="Permalink to this headline">#</a></h2>
 <p>Though both <code class="docutils literal notranslate"><span class="pre">.find()</span></code> and <code class="docutils literal notranslate"><span class="pre">.match()</span></code> is about finding nearest neighbours of a given “query” and both accpet similar arguments, there are some differences between them:</p>
@@ -720,7 +720,7 @@ match emb =   (0, 0)	1.0
 <span class="n">da1</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">da2</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Similar as in <code class="xref py py-meth docutils literal notranslate"><span class="pre">embed()</span></code>, if a DocumentArray is too large to fit into GPU memory, one can set <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> to alleviate the problem of OOM on GPU.</p>
+<p>Similar as in <a class="reference internal" href="../../../api/docarray.array.mixins.embed/#docarray.array.mixins.embed.EmbedMixin.embed" title="docarray.array.mixins.embed.EmbedMixin.embed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">embed()</span></code></a>, if a DocumentArray is too large to fit into GPU memory, one can set <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> to alleviate the problem of OOM on GPU.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">da1</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">da2</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -806,7 +806,7 @@ match emb =   (0, 0)	1.0
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

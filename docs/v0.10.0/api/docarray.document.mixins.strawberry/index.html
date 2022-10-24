@@ -539,8 +539,43 @@
                         </i>
                     </label>
                 </div>
-                <section id="docarray-document-mixins-strawberry-module">
-<h1>docarray.document.mixins.strawberry module<a class="headerlink" href="#docarray-document-mixins-strawberry-module" title="Permalink to this headline">#</a></h1>
+                <section id="module-docarray.document.mixins.strawberry">
+<span id="docarray-document-mixins-strawberry-module"></span><h1>docarray.document.mixins.strawberry module<a class="headerlink" href="#module-docarray.document.mixins.strawberry" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.document.mixins.strawberry.StrawberryMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.mixins.strawberry.</span></span><span class="sig-name descname"><span class="pre">StrawberryMixin</span></span><a class="reference internal" href="../../_modules/docarray/document/mixins/strawberry/#StrawberryMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.strawberry.StrawberryMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provide helper functions to convert to/from a Strawberry model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.strawberry.StrawberryMixin.to_strawberry_type">
+<span class="sig-name descname"><span class="pre">to_strawberry_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/strawberry/#StrawberryMixin.to_strawberry_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.strawberry.StrawberryMixin.to_strawberry_type" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert a Document object into a Strawberry type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../docarray.document.strawberry_type/#docarray.document.strawberry_type.StrawberryDocument" title="docarray.document.strawberry_type.StrawberryDocument">StrawberryDocument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.strawberry.StrawberryMixin.from_strawberry_type">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_strawberry_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/strawberry/#StrawberryMixin.from_strawberry_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.strawberry.StrawberryMixin.from_strawberry_type" title="Permalink to this definition">#</a></dt>
+<dd><p>Build a Document object from a Strawberry model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> – the Strawberry data model object that represents a Document</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>T</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a Document object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
             </article>
@@ -580,7 +615,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">

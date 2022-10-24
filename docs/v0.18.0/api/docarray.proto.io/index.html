@@ -12,7 +12,7 @@
   
 <meta property="og:site_name" content="DocArray 0.18.0 Documentation" />
   
-<meta property="og:description" content="Submodules: docarray.proto.io.ndarray module. Module contents:" />
+<meta property="og:description" content="Submodules: docarray.proto.io.ndarray module- read_ndarray(), flush_ndarray().. Module contents:" />
   
 <meta property="og:image" content="https://docarray.jina.ai/_static/banner.png" />
   
@@ -406,12 +406,36 @@
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../docarray.proto.io.ndarray/">docarray.proto.io.ndarray module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docarray.proto.io.ndarray/">docarray.proto.io.ndarray module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../docarray.proto.io.ndarray/#docarray.proto.io.ndarray.read_ndarray"><code class="docutils literal notranslate"><span class="pre">read_ndarray()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docarray.proto.io.ndarray/#docarray.proto.io.ndarray.flush_ndarray"><code class="docutils literal notranslate"><span class="pre">flush_ndarray()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="module-docarray.proto.io">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docarray.proto.io" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="docarray.proto.io.parse_proto">
+<span class="sig-prename descclassname"><span class="pre">docarray.proto.io.</span></span><span class="sig-name descname"><span class="pre">parse_proto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pb_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/proto/io/#parse_proto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.proto.io.parse_proto" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../docarray.document/#docarray.document.Document" title="docarray.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="docarray.proto.io.flush_proto">
+<span class="sig-prename descclassname"><span class="pre">docarray.proto.io.</span></span><span class="sig-name descname"><span class="pre">flush_proto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndarray_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/proto/io/#flush_proto"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.proto.io.flush_proto" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentProto</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -428,7 +452,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">
@@ -462,7 +486,11 @@
                         <ul>
 <li><a class="reference internal" href="#">docarray.proto.io package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-docarray.proto.io">Module contents</a><ul>
+<li><a class="reference internal" href="#docarray.proto.io.parse_proto"><code class="docutils literal notranslate"><span class="pre">parse_proto()</span></code></a></li>
+<li><a class="reference internal" href="#docarray.proto.io.flush_proto"><code class="docutils literal notranslate"><span class="pre">flush_proto()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

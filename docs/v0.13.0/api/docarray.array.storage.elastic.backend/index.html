@@ -570,8 +570,71 @@
                     </label>
                 </div>
                 <article role="main">
-                    <section id="docarray-array-storage-elastic-backend-module">
-<h1>docarray.array.storage.elastic.backend module<a class="headerlink" href="#docarray-array-storage-elastic-backend-module" title="Permalink to this headline">#</a></h1>
+                    <section id="module-docarray.array.storage.elastic.backend">
+<span id="docarray-array-storage-elastic-backend-module"></span><h1>docarray.array.storage.elastic.backend module<a class="headerlink" href="#module-docarray.array.storage.elastic.backend" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.elastic.backend.</span></span><span class="sig-name descname"><span class="pre">ElasticConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance='cosine'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hosts='http://localhost:9200'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">es_config=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_text=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_indices=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size=64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ef_construction=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/elastic/backend/#ElasticConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.n_dim">
+<span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.n_dim" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cosine'</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.distance" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.hosts">
+<span class="sig-name descname"><span class="pre">hosts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'http://localhost:9200'</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.hosts" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.index_name">
+<span class="sig-name descname"><span class="pre">index_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.index_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.es_config">
+<span class="sig-name descname"><span class="pre">es_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.es_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.index_text">
+<span class="sig-name descname"><span class="pre">index_text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.index_text" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.tag_indices">
+<span class="sig-name descname"><span class="pre">tag_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.tag_indices" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.batch_size">
+<span class="sig-name descname"><span class="pre">batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">64</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.batch_size" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.ef_construction">
+<span class="sig-name descname"><span class="pre">ef_construction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.ef_construction" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.ElasticConfig.m">
+<span class="sig-name descname"><span class="pre">m</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.storage.elastic.backend.ElasticConfig.m" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.storage.elastic.backend.BackendMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.storage.elastic.backend.</span></span><span class="sig-name descname"><span class="pre">BackendMixin</span></span><a class="reference internal" href="../../_modules/docarray/array/storage/elastic/backend/#BackendMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.storage.elastic.backend.BackendMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.base.backend/#docarray.array.storage.base.backend.BaseBackendMixin" title="docarray.array.storage.base.backend.BaseBackendMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.base.backend.BaseBackendMixin</span></code></a></p>
+<p>Provide necessary functions to enable this storage backend.</p>
+</dd></dl>
+
 </section>
 
                 </article>
@@ -609,7 +672,7 @@
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

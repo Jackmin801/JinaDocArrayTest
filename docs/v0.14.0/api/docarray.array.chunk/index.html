@@ -545,7 +545,7 @@ Note, that the last batch might be smaller than <cite>batch_size</cite>.</p>
 <dd><p>Get the blob attribute of all Documents.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>a list of blobs</p>
@@ -590,7 +590,7 @@ Note, that the last batch might be smaller than <cite>batch_size</cite>.</p>
 in-place (only with <cite>thread</cite> backend) or work later on return elements.</p></li>
 <li><p><strong>batch_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Size of each generated batch (except the last one, which might be smaller)</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress algorithm to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress algorithm to use</p></li>
 <li><p><strong>backend</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <p>if to use multi-<cite>process</cite> or multi-<cite>thread</cite> as the parallelization backend. In general, if your
 <code class="docutils literal notranslate"><span class="pre">func</span></code> is IO-bound then perhaps <cite>thread</cite> is good enough. If your <code class="docutils literal notranslate"><span class="pre">func</span></code> is CPU-bound then you may use <cite>process</cite>.
 In practice, you should try yourselves to figure out the best value. However, if you wish to modify the elements
@@ -602,7 +602,7 @@ the multiprocessing backing pass the variable via pickle and work in another pro
 and the original object do <strong>not</strong> share the same memory.</p>
 </div>
 </p></li>
-<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
+<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
 <li><p><strong>pool</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – use an existing/external pool. If given, <cite>backend</cite> is ignored and you will be responsible for closing the pool.</p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, show a progressbar</p></li>
 </ul>
@@ -628,7 +628,7 @@ and the original object do <strong>not</strong> share the same memory.</p>
 <cite>cpu</cite> or <cite>cuda</cite>.</p></li>
 <li><p><strong>batch_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – number of Documents in a batch for embedding</p></li>
 <li><p><strong>to_numpy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if to store embeddings back to Document in <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> or original framework format.</p></li>
-<li><p><strong>collate_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – create a mini-batch of Input(s) from the given <cite>DocumentArray</cite>.  Default built-in collate_fn
+<li><p><strong>collate_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]) – create a mini-batch of Input(s) from the given <cite>DocumentArray</cite>.  Default built-in collate_fn
 is to use the <cite>tensors</cite> of the documents.</p></li>
 </ul>
 </dd>
@@ -647,7 +647,7 @@ is to use the <cite>tensors</cite> of the documents.</p></li>
 <dd><p>Return a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> stacking all the <cite>embedding</cite> attributes as rows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> of embedding</p>
@@ -685,15 +685,15 @@ on comparing the <cite>matches</cite> of <cite>documents</cite> inside the <a hr
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>other</strong> (<a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><em>DocumentArray</em></a>) – The groundtruth DocumentArray` that the <cite>DocumentArray</cite> compares to.</p></li>
 <li><p><strong>metric</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[…, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – The name of the metric, or multiple metrics to be computed</p></li>
-<li><p><strong>hash_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – The function used for identifying the uniqueness of Documents. If not given, then <code class="docutils literal notranslate"><span class="pre">Document.id</span></code> is used.</p></li>
-<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – If provided, the results of the metrics computation will be stored in the <cite>evaluations</cite> field of each Document. If not provided, the name will be computed based on the metrics name.</p></li>
+<li><p><strong>hash_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – The function used for identifying the uniqueness of Documents. If not given, then <code class="docutils literal notranslate"><span class="pre">Document.id</span></code> is used.</p></li>
+<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – If provided, the results of the metrics computation will be stored in the <cite>evaluations</cite> field of each Document. If not provided, the name will be computed based on the metrics name.</p></li>
 <li><p><strong>strict</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If set, then left and right sides are required to be fully aligned: on the length, and on the semantic of length. These are preventing
 you to evaluate on irrelevant matches accidentally.</p></li>
 <li><p><strong>kwargs</strong> – Additional keyword arguments to be passed to <cite>metric_fn</cite></p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The average evaluation computed or a list of them if multiple metrics are required</p>
@@ -731,11 +731,11 @@ indexing and searching text fields. If not, a <cite>NotImplementedError</cite> w
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>query</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the input query to search by</p></li>
 <li><p><strong>limit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the maximum number of matches, when not given defaults to 20.</p></li>
-<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if provided, then match result will be marked with this string.</p></li>
+<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if provided, then match result will be marked with this string.</p></li>
 <li><p><strong>metric</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]) – the distance metric.</p></li>
 <li><p><strong>exclude_self</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, Documents in results with same <code class="docutils literal notranslate"><span class="pre">id</span></code> as the query values will not be
 considered as matches. This is only applied when the input query is Document or DocumentArray.</p></li>
-<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – filter query used for pre-filtering or filtering</p></li>
+<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – filter query used for pre-filtering or filtering</p></li>
 <li><p><strong>only_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, then returning matches will only contain <code class="docutils literal notranslate"><span class="pre">id</span></code></p></li>
 <li><p><strong>index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – if the query is a string, text search will be performed on the <cite>index</cite> field, otherwise, this
 parameter is ignored. By default, the Document <cite>text</cite> attribute will be used for search,
@@ -1047,7 +1047,7 @@ By default, <code class="docutils literal notranslate"><span class="pre">utf-8</
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryIO</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code>]) – File or filename or serialized bytes where the data is stored.</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress algorithm to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress algorithm to use</p></li>
 <li><p><strong>_show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show progress bar, only works when protocol is <cite>pickle</cite> or <cite>protobuf</cite></p></li>
 <li><p><strong>streaming</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if <cite>True</cite> returns a generator over <cite>Document</cite> objects.</p></li>
 </ul>
@@ -1074,7 +1074,7 @@ and <cite>compress=lz4</cite>.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TextIO</span></code>]) – File or filename to which the data is saved.</p></li>
-<li><p><strong>field_resolver</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – a map from field names defined in JSON, dict to the field
+<li><p><strong>field_resolver</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – a map from field names defined in JSON, dict to the field
 names defined in Document.</p></li>
 <li><p><strong>encoding</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – encoding used to read a CSV file. By default, <code class="docutils literal notranslate"><span class="pre">utf-8</span></code> is used.</p></li>
 </ul>
@@ -1136,7 +1136,7 @@ the multiprocessing backing pass the variable via pickle and work in another pro
 and the original object do <strong>not</strong> share the same memory.</p>
 </div>
 </p></li>
-<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
+<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show a progress bar</p></li>
 <li><p><strong>pool</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – use an existing/external pool. If given, <cite>backend</cite> is ignored and you will be responsible for closing the pool.</p></li>
 </ul>
@@ -1180,7 +1180,7 @@ the multiprocessing backing pass the variable via pickle and work in another pro
 and the original object do <strong>not</strong> share the same memory.</p>
 </div>
 </p></li>
-<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
+<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show a progress bar</p></li>
 <li><p><strong>pool</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – use an existing/external pool. If given, <cite>backend</cite> is ignored and you will be responsible for closing the pool.</p></li>
 </ul>
@@ -1223,20 +1223,20 @@ To use scipy metric, please set ``use_scipy=True``.
 <li><p><strong>darray</strong> (<a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><em>DocumentArray</em></a>) – the other DocumentArray  to match against</p></li>
 <li><p><strong>metric</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]]) – the distance metric</p></li>
 <li><p><strong>limit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the maximum number of matches, when not given defaults to 20.</p></li>
-<li><p><strong>normalization</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – a tuple [a, b] to be used with min-max normalization,
+<li><p><strong>normalization</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]) – a tuple [a, b] to be used with min-max normalization,
 the min distance will be rescaled to <cite>a</cite>, the max distance will be rescaled to <cite>b</cite>
 all values will be rescaled into range <cite>[a, b]</cite>.</p></li>
-<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if provided, then match result will be marked with this string.</p></li>
-<li><p><strong>batch_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if provided, then <code class="docutils literal notranslate"><span class="pre">darray</span></code> is loaded in batches, where each of them is at most <code class="docutils literal notranslate"><span class="pre">batch_size</span></code>
+<li><p><strong>metric_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if provided, then match result will be marked with this string.</p></li>
+<li><p><strong>batch_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – if provided, then <code class="docutils literal notranslate"><span class="pre">darray</span></code> is loaded in batches, where each of them is at most <code class="docutils literal notranslate"><span class="pre">batch_size</span></code>
 elements. When <cite>darray</cite> is big, this can significantly speedup the computation.</p></li>
 <li><p><strong>exclude_self</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, Documents in <code class="docutils literal notranslate"><span class="pre">darray</span></code> with same <code class="docutils literal notranslate"><span class="pre">id</span></code> as the left-hand values will not be
 considered as matches.</p></li>
-<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – filter query used for pre-filtering</p></li>
+<li><p><strong>filter</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – filter query used for pre-filtering</p></li>
 <li><p><strong>only_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, then returning matches will only contain <code class="docutils literal notranslate"><span class="pre">id</span></code></p></li>
 <li><p><strong>use_scipy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, use <code class="docutils literal notranslate"><span class="pre">scipy</span></code> as the computation backend. Note, <code class="docutils literal notranslate"><span class="pre">scipy</span></code> does not support distance
 on sparse matrix.</p></li>
 <li><p><strong>device</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the computational device for <code class="docutils literal notranslate"><span class="pre">.match()</span></code>, can be either <cite>cpu</cite> or <cite>cuda</cite>.</p></li>
-<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – <p>the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p>
+<li><p><strong>num_worker</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – <p>the number of parallel workers. If not given, then the number of CPUs in the system will be used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This argument is only effective when <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> is set.</p>
@@ -1261,9 +1261,9 @@ on sparse matrix.</p></li>
 <li><p><strong>title</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – the title of this visualization. If you want to compare multiple embeddings at the same time,
 make sure to give different names each time and set <code class="docutils literal notranslate"><span class="pre">path</span></code> to the same value.</p></li>
 <li><p><strong>host</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – if set, bind the embedding-projector frontend to given host. Otherwise <cite>localhost</cite> is used.</p></li>
-<li><p><strong>port</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if set, run the embedding-projector frontend at given port. Otherwise a random port is used.</p></li>
+<li><p><strong>port</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – if set, run the embedding-projector frontend at given port. Otherwise a random port is used.</p></li>
 <li><p><strong>image_sprites</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, visualize the dots using <a class="reference internal" href="../docarray.document/#docarray.document.Document.uri" title="docarray.document.Document.uri"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uri</span></code></a> and <a class="reference internal" href="../docarray.document/#docarray.document.Document.tensor" title="docarray.document.Document.tensor"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tensor</span></code></a>.</p></li>
-<li><p><strong>path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if set, then append the visualization to an existing folder, where you can compare multiple
+<li><p><strong>path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – if set, then append the visualization to an existing folder, where you can compare multiple
 embeddings at the same time. Make sure to use a different <code class="docutils literal notranslate"><span class="pre">title</span></code> each time .</p></li>
 <li><p><strong>min_image_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – only used when <cite>image_sprites=True</cite>. the minimum size of the image</p></li>
 <li><p><strong>channel_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – only used when <cite>image_sprites=True</cite>. the axis id of the color channel, <code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates the color channel info at the last axis</p></li>
@@ -1289,14 +1289,14 @@ Each sub-image is also square-sized and equally-sized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>output</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – Optional path to store the visualization. If not given, show in UI</p></li>
+<li><p><strong>output</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Optional path to store the visualization. If not given, show in UI</p></li>
 <li><p><strong>canvas_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the size of the canvas</p></li>
 <li><p><strong>min_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the minimum size of the image</p></li>
 <li><p><strong>channel_axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the axis id of the color channel, <code class="docutils literal notranslate"><span class="pre">-1</span></code> indicates the color channel info at the last axis</p></li>
 <li><p><strong>image_source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – specify where the image comes from, can be <code class="docutils literal notranslate"><span class="pre">uri</span></code> or <code class="docutils literal notranslate"><span class="pre">tensor</span></code>. empty tensor will fallback to uri</p></li>
 <li><p><strong>skip_empty</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – skip Document who has no .uri or .tensor.</p></li>
 <li><p><strong>show_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show the index on the top-right corner of every image</p></li>
-<li><p><strong>fig_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – the size of the figure</p></li>
+<li><p><strong>fig_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]) – the size of the figure</p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show a progressbar while plotting.</p></li>
 <li><p><strong>keep_aspect_ratio</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – preserve the aspect ratio of the image by using the aspect ratio of the first image in self.</p></li>
 </ul>
@@ -1330,8 +1330,8 @@ Each sub-image is also square-sized and equally-sized.</p>
 - <cite>jinahub+docker://Hello/latest/endpoint</cite>
 - <cite>jinahub+sandbox://Hello/endpoint</cite></p></li>
 <li><p><strong>show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if to show a progressbar</p></li>
-<li><p><strong>batch_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – number of Document on each request</p></li>
-<li><p><strong>parameters</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – parameters to send in the request</p></li>
+<li><p><strong>batch_size</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – number of Document on each request</p></li>
+<li><p><strong>parameters</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>]) – parameters to send in the request</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -1465,7 +1465,7 @@ Raise ValueError if the value is not present.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of elements to sample from the document array.</p></li>
-<li><p><strong>seed</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – initialize the random number generator, by default is None. If set will
+<li><p><strong>seed</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – initialize the random number generator, by default is None. If set will
 save the state of the random function to produce certain outputs.</p></li>
 </ul>
 </dd>
@@ -1508,7 +1508,7 @@ By default, <code class="docutils literal notranslate"><span class="pre">utf-8</
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryIO</span></code>]) – File or filename to which the data is saved.</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – <p>compress algorithm to use</p>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <p>compress algorithm to use</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If <cite>file</cite> is <cite>str</cite> it can specify <cite>protocol</cite> and <cite>compress</cite> as file extensions.
@@ -1543,7 +1543,7 @@ and <cite>compress=lz4</cite>.</p>
 <li><p><strong>file</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">TextIO</span></code>]) – File or filename to which the data is saved.</p></li>
 <li><p><strong>flatten_tags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – if set, then all fields in <code class="docutils literal notranslate"><span class="pre">Document.tags</span></code> will be flattened into <code class="docutils literal notranslate"><span class="pre">tag__fieldname</span></code> and
 stored as separated columns. It is useful when <code class="docutils literal notranslate"><span class="pre">tags</span></code> contain a lot of information.</p></li>
-<li><p><strong>exclude_fields</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – if set, those fields wont show up in the output CSV</p></li>
+<li><p><strong>exclude_fields</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – if set, those fields wont show up in the output CSV</p></li>
 <li><p><strong>dialect</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code>]) – define a set of parameters specific to a particular CSV dialect. could be a string that represents
 predefined dialects in your system, or could be a <code class="xref py py-class docutils literal notranslate"><span class="pre">csv.Dialect</span></code> class that groups specific formatting
 parameters together.</p></li>
@@ -1627,7 +1627,7 @@ parameters together.</p></li>
 <dd><p>Randomly shuffle documents within the <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>seed</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – initialize the random number generator, by default is None. If set will
+<dd class="field-odd"><p><strong>seed</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – initialize the random number generator, by default is None. If set will
 save the state of the random function to produce certain outputs.</p>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -1686,7 +1686,7 @@ first element in the DocumentArray</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>]</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>a <code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayType</span></code> of tensors</p>
@@ -1700,7 +1700,7 @@ first element in the DocumentArray</p>
 <dd><p>Get <a class="reference internal" href="../docarray.document/#docarray.document.Document.text" title="docarray.document.Document.text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">text</span></code></a> of all Documents</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</p>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>a list of texts</p>
@@ -1726,9 +1726,9 @@ first element in the DocumentArray</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>_file_ctx</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryIO</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – File or filename or serialized bytes where the data is stored.</p></li>
+<li><p><strong>_file_ctx</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">BinaryIO</span></code>]) – File or filename or serialized bytes where the data is stored.</p></li>
 <li><p><strong>protocol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – protocol to use</p></li>
-<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – compress algorithm to use</p></li>
+<li><p><strong>compress</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – compress algorithm to use</p></li>
 <li><p><strong>_show_progress</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – show progress bar, only works when protocol is <cite>pickle</cite> or <cite>protobuf</cite></p></li>
 </ul>
 </dd>
@@ -1815,7 +1815,7 @@ first element in the DocumentArray</p>
 <dd><p>Convert DocumentArray into a Protobuf message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ndarray_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – can be <code class="docutils literal notranslate"><span class="pre">list</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, if set it will force all ndarray-like object from all
+<dd class="field-odd"><p><strong>ndarray_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – can be <code class="docutils literal notranslate"><span class="pre">list</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, if set it will force all ndarray-like object from all
 Documents to <code class="docutils literal notranslate"><span class="pre">List</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>.</p>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -1858,7 +1858,7 @@ Each :class:<code class="docutils literal notranslate"><span class="pre">Travers
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a comma-separated string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – function to filter docs during traversal</p></li>
+<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yield</dt>
@@ -1901,7 +1901,7 @@ behavior then in :method:<code class="docutils literal notranslate"><span class=
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a list of string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – function to filter docs during traversal</p></li>
+<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -1922,7 +1922,7 @@ with all Documents, that are reached by the path.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>traversal_paths</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – a comma-separated string that represents the traversal path</p></li>
-<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – function to filter docs during traversal</p></li>
+<li><p><strong>filter_fn</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>[[<code class="xref py py-class docutils literal notranslate"><span class="pre">ForwardRef</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>]]) – function to filter docs during traversal</p></li>
 </ul>
 </dd>
 <dt class="field-even">Yield</dt>
@@ -1933,7 +1933,7 @@ with all Documents, that are reached by the path.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="docarray.array.chunk.ChunkArray.TYPE_MAP">
-<span class="sig-name descname"><span class="pre">TYPE_MAP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap" title="docarray.array.storage.base.backend.TypeMap"><span class="pre">TypeMap</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.chunk.ChunkArray.TYPE_MAP" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">TYPE_MAP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../docarray.array.storage.base.backend/#docarray.array.storage.base.backend.TypeMap" title="docarray.array.storage.base.backend.TypeMap"><span class="pre">docarray.array.storage.base.backend.TypeMap</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#docarray.array.chunk.ChunkArray.TYPE_MAP" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1953,7 +1953,7 @@ with all Documents, that are reached by the path.</p>
                         <div class="copyright">
                             Copyright &#169; Jina AI Limited. All rights reserved.
                         </div><div class="last-updated">
-                            Last updated on Oct 23, 2022</div>
+                            Last updated on Oct 24, 2022</div>
                     </div>
                     <div class="right-details">
                         <div class="social-btns">

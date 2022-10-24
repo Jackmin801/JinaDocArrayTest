@@ -491,8 +491,58 @@
                         </i>
                     </label>
                 </div>
-                <section id="docarray-array-weaviate-module">
-<h1>docarray.array.weaviate module<a class="headerlink" href="#docarray-array-weaviate-module" title="Permalink to this headline">#</a></h1>
+                <section id="module-docarray.array.weaviate">
+<span id="docarray-array-weaviate-module"></span><h1>docarray.array.weaviate module<a class="headerlink" href="#module-docarray.array.weaviate" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.weaviate.DocumentArrayWeaviate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.weaviate.</span></span><span class="sig-name descname"><span class="pre">DocumentArrayWeaviate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'memory'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/weaviate/#DocumentArrayWeaviate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.weaviate.DocumentArrayWeaviate" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../docarray.array.storage.weaviate/#docarray.array.storage.weaviate.StorageMixins" title="docarray.array.storage.weaviate.StorageMixins"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.storage.weaviate.StorageMixins</span></code></a>, <a class="reference internal" href="../docarray.array.document/#docarray.array.document.DocumentArray" title="docarray.array.document.DocumentArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">docarray.array.document.DocumentArray</span></code></a></p>
+<p>This is a <code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArray</span></code> that uses Weaviate as
+vector search engine and storage.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__new__</span></code> method for <a class="reference internal" href="#docarray.array.weaviate.DocumentArrayWeaviate" title="docarray.array.weaviate.DocumentArrayWeaviate"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayWeaviate</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – <p>list of args to instantiate the object</p>
+</p></li>
+<li><p><strong>**kwargs</strong> – <p>dict of args to instantiate the object</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the instantiated <a class="reference internal" href="#docarray.array.weaviate.DocumentArrayWeaviate" title="docarray.array.weaviate.DocumentArrayWeaviate"><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentArrayWeaviate</span></code></a> object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.array.weaviate.WeaviateConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.array.weaviate.</span></span><span class="sig-name descname"><span class="pre">WeaviateConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client='http://localhost:8080'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serialize_config=&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/array/storage/weaviate/backend/#WeaviateConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.array.weaviate.WeaviateConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class stores the config variables to initialize
+connection to the Weaviate server</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.weaviate.WeaviateConfig.n_dim">
+<span class="sig-name descname"><span class="pre">n_dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#docarray.array.weaviate.WeaviateConfig.n_dim" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.weaviate.WeaviateConfig.client">
+<span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">weaviate.client.Client</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'http://localhost:8080'</span></em><a class="headerlink" href="#docarray.array.weaviate.WeaviateConfig.client" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.weaviate.WeaviateConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#docarray.array.weaviate.WeaviateConfig.name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="docarray.array.weaviate.WeaviateConfig.serialize_config">
+<span class="sig-name descname"><span class="pre">serialize_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span></em><a class="headerlink" href="#docarray.array.weaviate.WeaviateConfig.serialize_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
             </article>
@@ -527,7 +577,7 @@
 
                 <div class="related-information sd-d-inline-flex">
                     <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
-                    Last updated on Oct 23, 2022.
+                    Last updated on Oct 24, 2022.
                     <div class="social-btns">
                     <a class='social-btn' href="https://github.com/jina-ai/docarray/" aria-label="GitHub" target="_blank" rel="noreferrer"> <i class="fab fa-github"></i></a>
                     <a class='social-btn' href="https://slack.jina.ai" aria-label="Slack" target="_blank" rel="noreferrer"> <i class="fab fa-slack"></i></a>

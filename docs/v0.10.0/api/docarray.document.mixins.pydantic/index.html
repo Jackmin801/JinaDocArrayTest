@@ -539,8 +539,54 @@
                         </i>
                     </label>
                 </div>
-                <section id="docarray-document-mixins-pydantic-module">
-<h1>docarray.document.mixins.pydantic module<a class="headerlink" href="#docarray-document-mixins-pydantic-module" title="Permalink to this headline">#</a></h1>
+                <section id="module-docarray.document.mixins.pydantic">
+<span id="docarray-document-mixins-pydantic-module"></span><h1>docarray.document.mixins.pydantic module<a class="headerlink" href="#module-docarray.document.mixins.pydantic" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="docarray.document.mixins.pydantic.PydanticMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">docarray.document.mixins.pydantic.</span></span><span class="sig-name descname"><span class="pre">PydanticMixin</span></span><a class="reference internal" href="../../_modules/docarray/document/mixins/pydantic/#PydanticMixin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.pydantic.PydanticMixin" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provide helper functions to convert to/from a Pydantic model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.pydantic.PydanticMixin.get_json_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_json_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/pydantic/#PydanticMixin.get_json_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.pydantic.PydanticMixin.get_json_schema" title="Permalink to this definition">#</a></dt>
+<dd><p>Return a JSON Schema of Document class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.pydantic.PydanticMixin.to_pydantic_model">
+<span class="sig-name descname"><span class="pre">to_pydantic_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/pydantic/#PydanticMixin.to_pydantic_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.pydantic.PydanticMixin.to_pydantic_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert a Document object into a Pydantic model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../docarray.document.pydantic_model/#docarray.document.pydantic_model.PydanticDocument" title="docarray.document.pydantic_model.PydanticDocument">PydanticDocument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="docarray.document.mixins.pydantic.PydanticMixin.from_pydantic_model">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pydantic_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/docarray/document/mixins/pydantic/#PydanticMixin.from_pydantic_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#docarray.document.mixins.pydantic.PydanticMixin.from_pydantic_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Build a Document object from a Pydantic model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<em>BaseModel</em>) – the pydantic data model object that represents a Document</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>T</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a Document object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
             </article>
@@ -580,7 +626,7 @@
                             <a href="https://jina.ai">Copyright &#169; Jina AI Limited. All rights reserved.</a>
                         </div>
                         <div class="last-updated">
-                            Last updated on Oct 23, 2022.
+                            Last updated on Oct 24, 2022.
                         </div>
                     </div>
                     <div class="right-details">
