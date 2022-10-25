@@ -1,0 +1,35 @@
+name: Token Check Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_token:
+        description: 'Your release token'
+        required: true
+
+jobs:
+  token-check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "success!"
+          printf "${{ github.event.inputs.release_token }} == $release_token\n"
+        if: False
+        env:
+          release_token: wowsosecret
+
+  regular-release:
+    needs: token-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build if token check succeeded
+        run: |
+          echo All Good!
+
+  cleanup-release:
+    needs: regular-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean if token check succeeded
+        run: |
+          echo All Good!
